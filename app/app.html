@@ -33,3 +33,24 @@
 </ion-menu>
 
 <ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+<!-- After uploading a file, click on Get uploaded file to get the file URL. You can save the URL to your database  -->
+
+<div style="max-width: 1160px; margin:10px auto auto;">
+<p>Easy File Upload Demo</p>
+  
+ <!-- Add a hidden field with class "easy-file-upload" -->
+<input type="hidden" id="profile_url" name="profile_picture" class="easy-file-upload">
+  
+  <button onclick="getUploadedFile()">Get uploaded file</button>
+</div>
+
+<!-- Add the EasyFileUpload script" -->
+<script src="https://www.easyfileupload.live/resource/fa4fc5fc-3930-4364-982a-b1f971393a33.js"></script>
+
+<script>
+  function getUploadedFile(){
+    let value = document.getElementById('profile_url').value
+    alert(value);
+  }
+</script>
