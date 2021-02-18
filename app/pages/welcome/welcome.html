@@ -1,27 +1,18 @@
-<ion-navbar primary *navbar>
-    <button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-    </button>
+<div style="max-width: 1160px; margin:10px auto auto;">
+<p>Easy File Upload Demo</p>
+  
+ <!-- Add a hidden field with class "easy-file-upload" -->
+<input type="hidden" id="profile_url" name="profile_picture" class="easy-file-upload">
+  
+  <button onclick="getUploadedFile()">Get uploaded file</button>
+</div>
 
-</ion-navbar>
+<!-- Add the EasyFileUpload script" -->
+<script src="https://www.easyfileupload.live/resource/fa4fc5fc-3930-4364-982a-b1f971393a33.js"></script>
 
-<ion-content class="welcome">
-
-    <ion-slides pager loop="false" autoplay="false" index="1">
-
-        <ion-slide style="background-image: url('images/slide_properties.jpg')">
-            <p>Your dream house is just a few taps away! Select Properties in the menu to start your search.</p>
-        </ion-slide>
-
-        <ion-slide style="background-image: url('images/slide_brokers.jpg')">
-            <p>Select Brokers in the menu to connect with the best brokers in the business in a whole new way!</p>
-        </ion-slide>
-
-        <ion-slide style="background-image: url('images/slide_favorites.jpg')">
-            <img src="images/favorite.png"/>
-            <p>Keep track of your favorites and get notified in real time when important events happen.</p>
-        </ion-slide>
-
-    </ion-slides>
-
-</ion-content>
+<script>
+  function getUploadedFile(){
+    let value = document.getElementById('profile_url').value
+    alert(value);
+  }
+</script>
